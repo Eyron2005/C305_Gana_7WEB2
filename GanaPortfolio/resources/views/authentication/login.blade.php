@@ -1,11 +1,22 @@
 @include('components.header')
-{!! Form::open(['route'=> 'register', 'method'=>'post']) !!}
-<p>Name</p>
-{!! Form::text('name') !!}
-<p>Email</p>
-{!! Form::text('email') !!}
-<p>Password</p>
-{!! Form::text('password') !!}
-<p>Confirm Password</p>
-{!! Form::text('name') !!}
-@include('components.footer')
+    @if($errors->any())
+        <div style="color: red">
+            @foreach ($errors->all() as $error)
+             <p>{{$error}}</p>
+            @endforeach
+        </div>
+    @endif
+    <form>
+        <p>Name</p>
+        <input type="text" name="name">
+        <p>Email</p>
+        <input type="email" name="email">
+        <p>Password</p>
+        <input type="password" name="password">
+        <p>Confirm Password</p>
+        <input type="password" name="password_confirmation">
+        <input type="sumbit">
+
+    </form>
+
+    @include('components.footer')

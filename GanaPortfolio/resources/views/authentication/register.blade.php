@@ -1,11 +1,30 @@
 @include('components.header')
-    {!! Form::open(['route'=> 'register', 'method'=>'post']) !!}
+
+@if ($errors->any())
+    <div style="color: red;">
+        @foreach ($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    </div>
+@endif
+
+<form action="{{ route('register') }}" method="POST">
+    @csrf
+
     <p>Name</p>
-    {!! Form::text('name') !!}
+    <input type="text" name="name" value="{{ old('name') }}">
+
     <p>Email</p>
-    {!! Form::text('email') !!}
+    <input type="email" name="email" value="{{ old('email') }}">
+
     <p>Password</p>
-    {!! Form::text('password') !!}
+    <input type="password" name="password">
+
     <p>Confirm Password</p>
-    {!! Form::text('password_confirmation') !!}
+    <input type="password" name="password_confirmation" required>
+
+    <button type="submit">Register</button>
+</form>
+
+
 @include('components.footer')
