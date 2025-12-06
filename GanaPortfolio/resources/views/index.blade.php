@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -112,7 +112,7 @@
     <i class="fas fa-moon text-yellow-400"></i>
 </button>
 
-<!-- ███████ NEW NAVBAR ███████ -->
+<!-- ███████ NAVBAR ███████ -->
 
 <nav id="navbar" class="fixed top-0 left-0 w-full z-50 
     bg-gray-800/40 dark:bg-gray-100/40 backdrop-blur-xl
@@ -128,13 +128,52 @@
         </h1>
 
         <!-- DESKTOP MENU -->
-        <ul class="hidden md:flex gap-10 text-lg font-medium">
-            <li class="nav-item"><a href="#about">About</a></li>
-            <li class="nav-item"><a href="#skills">Skills</a></li>
-            <li class="nav-item"><a href="#projects">Projects</a></li>
-            <li class="nav-item"><a href="#experience">Experience</a></li>
-            <li class="nav-item"><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="hidden md:flex items-center gap-8 text-lg font-medium">
+            <ul class="flex gap-8">
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#skills">Skills</a></li>
+                <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#experience">Experience</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+
+            {{-- AUTH BUTTONS (DESKTOP) --}}
+            @guest
+                <div class="flex items-center gap-3">
+                    <a href="{{ route('login.form') }}"
+                       class="px-4 py-2 text-sm rounded-full border border-indigo-400 text-indigo-200 hover:bg-indigo-500 hover:text-white transition">
+                        Login
+                    </a>
+                    <a href="{{ route('register.form') }}"
+                       class="px-4 py-2 text-sm rounded-full bg-indigo-600 text-white hover:bg-indigo-500 transition">
+                        Register
+                    </a>
+                </div>
+            @endguest
+
+            @auth
+                <div class="flex items-center gap-3">
+                    <span class="text-sm text-gray-300 dark:text-gray-700">
+                        Hello, <strong>{{ Auth::user()->name }}</strong>
+                    </span>
+
+                    @if(Auth::user()->is_admin)
+                        <a href="{{ route('admin.portfolio.index') }}"
+                           class="px-4 py-2 text-xs rounded-full bg-purple-600 text-white hover:bg-purple-500 transition">
+                            Admin Panel
+                        </a>
+                    @endif
+
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit"
+                                class="px-4 py-2 text-xs rounded-full bg-red-500 text-white hover:bg-red-600 transition">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+            @endauth
+        </div>
 
         <!-- HAMBURGER -->
         <button id="menu-btn" class="md:hidden text-3xl text-white dark:text-gray-900">
@@ -152,6 +191,39 @@
         <a href="#projects" class="mobile-link">Projects</a>
         <a href="#experience" class="mobile-link">Experience</a>
         <a href="#contact" class="mobile-link">Contact</a>
+
+        {{-- AUTH BUTTONS (MOBILE) --}}
+        @guest
+            <div class="pt-4 border-t border-white/10 dark:border-gray-900/20 space-y-3">
+                <a href="{{ route('login.form') }}" class="block mobile-link">
+                    Login
+                </a>
+                <a href="{{ route('register.form') }}" class="block mobile-link">
+                    Register
+                </a>
+            </div>
+        @endguest
+
+        @auth
+            <div class="pt-4 border-t border-white/10 dark:border-gray-900/20 space-y-3">
+                <p class="text-sm text-gray-300 dark:text-gray-700">
+                    Logged in as <strong>{{ Auth::user()->name }}</strong>
+                </p>
+
+                @if(Auth::user()->is_admin)
+                    <a href="{{ route('admin.portfolio.index') }}" class="block mobile-link">
+                        Admin Panel
+                    </a>
+                @endif
+
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="mobile-link text-red-400">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        @endauth
     </div>
 </nav>
 
@@ -171,9 +243,13 @@
     <div class="absolute bottom-10 right-0 w-40 h-40 bg-purple-800 dark:bg-purple-300 opacity-50 rounded-full float"></div>
 
     <div class="relative z-10" data-aos="zoom-in">
-        <h2 class="text-6xl font-bold text-white dark:text-gray-900 mb-6">Hi, I’m <span class="text-indigo-300 dark:text-indigo-600">Eyron</span></h2>
+        <h2 class="text-6xl font-bold text-white dark:text-gray-900 mb-6">
+            Hi, I’m <span class="text-indigo-300 dark:text-indigo-600">Eyron</span>
+        </h2>
 
-        <p class="text-xl text-gray-200 dark:text-gray-700 mb-6">Full-stack Developer • Designer • Problem Solver</p>
+        <p class="text-xl text-gray-200 dark:text-gray-700 mb-6">
+            Full-stack Developer • Designer • Problem Solver
+        </p>
 
         <div class="text-2xl font-space-mono">
             <span class="typewriter-text">Building cool things with code.</span>
