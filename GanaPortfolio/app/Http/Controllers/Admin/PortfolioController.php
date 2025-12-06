@@ -21,18 +21,30 @@ class PortfolioController extends Controller
         });
     }
 
+    /**
+     * List all projects (Manage Portfolio)
+     */
     public function index()
     {
-        $items = Portfolio::orderBy('sort_order')->get();
+        // use $projects to match your Blade
+        $projects = Portfolio::orderBy('sort_order')->get();
 
-        return view('admin.portfolio.index', compact('items'));
+        // view: resources/views/admin/portfolio/index.blade.php
+        return view('admin.manage', compact('projects'));
     }
 
+    /**
+     * Show create form
+     */
     public function create()
     {
-        return view('admin.portfolio.create');
+        // view: resources/views/admin/portfolio/create.blade.php
+        return view('admin.create');
     }
 
+    /**
+     * Store new project
+     */
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -48,15 +60,24 @@ class PortfolioController extends Controller
         Portfolio::create($data);
 
         return redirect()
-            ->route('admin.portfolio.index')
+            ->route('admin.dashboard')
             ->with('success', 'Portfolio item created.');
     }
 
+    /**
+     * Show edit form
+     */
     public function edit(Portfolio $portfolio)
     {
-        return view('admin.portfolio.edit', ['item' => $portfolio]);
+        $project = $portfolio; // rename for clarity in the view
+
+        // view: resources/views/admin/portfolio/edit.blade.php
+        return view('admin.portfolio.edit', compact('project'));
     }
 
+    /**
+     * Update existing project
+     */
     public function update(Request $request, Portfolio $portfolio)
     {
         $data = $request->validate([
@@ -76,6 +97,9 @@ class PortfolioController extends Controller
             ->with('success', 'Portfolio item updated.');
     }
 
+    /**
+     * Delete project
+     */
     public function destroy(Portfolio $portfolio)
     {
         $portfolio->delete();
