@@ -6,36 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 
-    - primary meta tags
-  -->
-  <title>Julia - I'm User Interface Designer & Developer.</title>
-  <meta name="title" content="Julia - I'm User Interface Designer & Developer.">
+  <title>Eyron - I'm User Interface Designer & Developer.</title>
+  <meta name="title" content="Eyron - I'm User Interface Designer & Developer.">
   <meta name="description" content="This is a personal portfolio html template made by codewithsadee">
 
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
 
-  <!-- 
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- your CSS -->
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
-  <link rel="preload" as="image" href="./assets/images/Blog.svg">
-
+  <!-- preload images -->
+  <link rel="preload" as="image" href="{{ asset('images/hero-banner.jpg') }}">
+  <link rel="preload" as="image" href="{{ asset('images/Blog.svg') }}">
 </head>
 
 <body>
@@ -47,17 +33,9 @@
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo">
-        <img src="./assets/images/logo-dark.svg" width="64" height="24" alt="Julia home">
-      </a>
-
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
-          <a href="#" class="logo">
-            <img src="./assets/images/logo-light.svg" width="64" height="24" alt="Julia home">
-          </a>
-
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
@@ -138,10 +116,6 @@
     </div>
   </header>
 
-
-
-
-
   <main>
     <article>
 
@@ -153,10 +127,10 @@
         <div class="container">
 
           <figure class="hero-banner">
-            <img src="./assets/images/hero-banner.jpg" width="560" height="540" alt="Julia" class="w-100"
+            <img src="{{ asset('images/hero-banner.jpg') }}" width="560" height="540" alt="" class="w-100"
               data-reveal="top">
 
-            <img src="./assets/images/hero-shape.svg" width="203" height="91" alt="250+ Projects Done" class="shape"
+            <img src="{{ asset('images/hero-shape.svg') }}" width="203" height="91" alt="250+ Projects Done" class="shape"
               data-reveal="top" data-reveal-delay="0.25s">
           </figure>
 
@@ -167,7 +141,7 @@
             </h1>
 
             <p class="section-text" data-reveal="top" data-reveal-delay="0.75s">
-              Hello! I'm Julia, a freelance user interface designer & developer based in London. I’m very passionate
+              Hello! I'm Eyron, a freelance user interface designer & developer based in London. I’m very passionate
               about the work that I do.
             </p>
 
@@ -181,10 +155,6 @@
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #ABOUT
@@ -209,7 +179,7 @@
 
               <li class="progress-item">
 
-                <div class="label-wrapper">
+                <div class="label-wrapper ">
                   <p>Web Design</p>
 
                   <span class="span">100 %</span>
@@ -273,7 +243,7 @@
               <div class="about-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/icon-1.svg" width="52" height="52" loading="lazy" alt="web design icon">
+                  <img src="{{ asset('images/icon-1.svg') }}" width="52" height="52" loading="lazy" alt="web design icon">
                 </div>
 
                 <h3 class="h4 card-title">Web Design</h3>
@@ -290,7 +260,7 @@
               <div class="about-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/icon-2.svg" width="52" height="52" loading="lazy" alt="mobile design icon">
+                  <img src="{{ asset('images/icon-2.svg') }}" width="52" height="52" loading="lazy" alt="mobile design icon">
                 </div>
 
                 <h3 class="h4 card-title">Mobile Design</h3>
@@ -307,7 +277,7 @@
               <div class="about-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/icon-3.svg" width="52" height="52" loading="lazy"
+                  <img src="{{ asset('images/icon-3.svg') }}" width="52" height="52" loading="lazy"
                     alt="web development icon">
                 </div>
 
@@ -325,7 +295,7 @@
               <div class="about-card">
 
                 <div class="card-icon">
-                  <img src="./assets/images/icon-4.svg" width="52" height="52" loading="lazy" alt="web seo icon">
+                  <img src="{{ asset('images/icon-4.svg') }}" width="52" height="52" loading="lazy" alt="web seo icon">
                 </div>
 
                 <h3 class="h4 card-title">SEO</h3>
@@ -342,10 +312,6 @@
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #PROJECT
@@ -393,7 +359,7 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="./assets/images/project-1.png" width="650" height="370" loading="lazy" alt="Web Design"
+                  <img src="{{ asset('images/project-1.png') }}" width="650" height="370" loading="lazy" alt="Web Design"
                     class="w-100">
                 </figure>
 
@@ -423,7 +389,7 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="left">
-                  <img src="./assets/images/project-2.png" width="600" height="367" loading="lazy" alt="Web Design"
+                  <img src="{{ asset('images/project-2.png') }}" width="600" height="367" loading="lazy" alt="Web Design"
                     class="w-100">
                 </figure>
 
@@ -453,7 +419,7 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="./assets/images/project-3.png" width="600" height="367" loading="lazy" alt="Web Design"
+                  <img src="{{ asset('images/project-3.png') }}" width="600" height="367" loading="lazy" alt="Web Design"
                     class="w-100">
                 </figure>
 
@@ -483,7 +449,7 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="./assets/images/project-4.png" width="620" height="370" loading="lazy" alt="Mobile Design"
+                  <img src="{{ asset('images/project-4.png') }}" width="620" height="370" loading="lazy" alt="Mobile Design"
                     class="w-100">
                 </figure>
 
@@ -494,10 +460,6 @@
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #CONTACT
@@ -511,7 +473,7 @@
             <div class="contact-content" data-reveal="left">
 
               <div class="card-icon">
-                <img src="./assets/images/icon-5.svg" width="44" height="44" loading="lazy" alt="envelop icon">
+                <img src="{{ asset('images/icon-5.svg') }}" width="44" height="44" loading="lazy" alt="envelop icon">
               </div>
 
               <h2 class="h2 section-title">If you like what you see, let's work together.</h2>
@@ -544,10 +506,6 @@
 
     </article>
   </main>
-
-
-
-
 
   <!-- 
     - #FOOTER
@@ -597,14 +555,10 @@
     </div>
   </footer>
 
-
-
-
-
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="{{ asset('js/script.js') }}"></script>
 
   <!-- 
     - ionicon link
@@ -613,5 +567,4 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
-
 </html>

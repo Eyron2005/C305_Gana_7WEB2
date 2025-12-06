@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\PortfolioController;
 // Public home page (for normal users)
 Route::get('/', function () {
     // this must match resources/views/index.blade.php
-    return view('index');
+    return view('portfolio');
 })->name('home');
 
 // Auth routes
