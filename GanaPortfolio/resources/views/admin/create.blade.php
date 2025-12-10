@@ -21,7 +21,7 @@
 
 <div class="min-h-screen flex">
 
-    <!-- Sidebar (same as manage) -->
+    <!-- Sidebar -->
     <aside class="w-64 bg-white/90 border-r border-slate-200 shadow-sm hidden md:flex flex-col">
         <div class="px-6 py-5 flex items-center gap-3 border-b border-slate-100">
             <div class="h-9 w-9 rounded-2xl bg-rose-500/10 flex items-center justify-center">
@@ -87,13 +87,6 @@
                                 <li>{{ $error }}</li>
                             @endforeach
                         </ul>
-                    </div>
-                @endif
-
-                {{-- Success flash (if you ever redirect back here) --}}
-                @if (session('success'))
-                    <div class="bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs rounded-2xl px-4 py-3">
-                        {{ session('success') }}
                     </div>
                 @endif
 
@@ -167,7 +160,7 @@
                                         placeholder="https://your-cdn.com/project-cover.png"
                                     >
                                     <p class="mt-1 text-[11px] text-slate-400">
-                                        Use a 16:9 screenshot or mockup for best results.
+                                        This URL will be used directly on your public portfolio page.
                                     </p>
                                 </div>
 

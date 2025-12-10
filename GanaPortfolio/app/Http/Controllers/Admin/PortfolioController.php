@@ -11,7 +11,6 @@ class PortfolioController extends Controller
 {
     public function __construct()
     {
-        // Require login + admin for every action in this controller
         $this->middleware(function ($request, $next) {
             if (!Auth::check() || !Auth::user()->is_admin) {
                 abort(403, 'Unauthorized');
@@ -21,30 +20,20 @@ class PortfolioController extends Controller
         });
     }
 
-    /**
-     * List all projects (Manage Portfolio)
-     */
     public function index()
     {
-        // use $projects to match your Blade
         $projects = Portfolio::orderBy('sort_order')->get();
 
-        // view: resources/views/admin/portfolio/index.blade.php
-        return view('admin.manage', compact('projects'));
+        return view('admin.create', compact('projects'));
     }
 
-    /**
-     * Show create form
-     */
+
     public function create()
     {
-        // view: resources/views/admin/portfolio/create.blade.php
-        return view('admin.create');
+        return view('admin.portfolio.create');
     }
 
-    /**
-     * Store new project
-     */
+  
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -57,27 +46,25 @@ class PortfolioController extends Controller
             'sort_order'  => 'nullable|integer',
         ]);
 
+        if (empty($data['sort_order'])) {
+            $maxOrder = Portfolio::max('sort_order');
+            $data['sort_order'] = $maxOrder ? $maxOrder + 1 : 1;
+        }
+
         Portfolio::create($data);
 
         return redirect()
-            ->route('admin.dashboard')
+            ->route('admin.portfolio.index')
             ->with('success', 'Portfolio item created.');
     }
 
-    /**
-     * Show edit form
-     */
     public function edit(Portfolio $portfolio)
     {
-        $project = $portfolio; // rename for clarity in the view
+        $project = $portfolio;
 
-        // view: resources/views/admin/portfolio/edit.blade.php
         return view('admin.portfolio.edit', compact('project'));
     }
 
-    /**
-     * Update existing project
-     */
     public function update(Request $request, Portfolio $portfolio)
     {
         $data = $request->validate([
@@ -97,9 +84,6 @@ class PortfolioController extends Controller
             ->with('success', 'Portfolio item updated.');
     }
 
-    /**
-     * Delete project
-     */
     public function destroy(Portfolio $portfolio)
     {
         $portfolio->delete();
