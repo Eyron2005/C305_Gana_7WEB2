@@ -28,11 +28,6 @@
 
                 <!-- left side: text, similar to hero -->
                 <div class="space-y-4">
-                    <span class="inline-flex items-center gap-2 rounded-full bg-rose-50 text-rose-500 text-xs font-semibold px-3 py-1">
-                        <span class="h-1.5 w-1.5 rounded-full bg-rose-500"></span>
-                        Welcome back
-                    </span>
-
                     <h1 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
                         Sign in to manage<br>your portfolio.
                     </h1>
@@ -40,24 +35,10 @@
                     <p class="text-sm md:text-base text-slate-500">
                         Access your dashboard, update projects, and keep your personal brand looking sharp.
                     </p>
-
-                    <div class="flex items-center gap-3 text-xs text-slate-400">
-                        <div class="flex -space-x-2">
-                            <div class="h-7 w-7 rounded-full bg-rose-200"></div>
-                            <div class="h-7 w-7 rounded-full bg-sky-200"></div>
-                            <div class="h-7 w-7 rounded-full bg-emerald-200"></div>
-                        </div>
-                        <span>Trusted by creatives just like you.</span>
-                    </div>
                 </div>
 
                 <!-- right side: form -->
                 <div class="bg-slate-50/60 rounded-2xl border border-slate-100 px-5 py-6 md:px-6 md:py-7">
-                    <div class="mb-5">
-                        <h2 class="text-lg font-semibold text-slate-900">Login</h2>
-                        <p class="text-xs text-slate-500 mt-1">Enter your details to continue.</p>
-                    </div>
-
                     <!-- Laravel status -->
                     @if (session('status'))
                         <div class="mb-4 text-xs rounded-xl bg-emerald-50 text-emerald-700 px-3 py-2">

@@ -146,23 +146,6 @@
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 px-4 py-4">
-                            <h3 class="text-sm font-semibold text-slate-900">System Status</h3>
-                            <ul class="mt-3 space-y-2 text-xs">
-                                <li class="flex items-center justify-between">
-                                    <span class="text-slate-500">Site visibility</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 text-[11px] font-medium">Online</span>
-                                </li>
-                                <li class="flex items-center justify-between">
-                                    <span class="text-slate-500">Backups</span>
-                                    <span class="text-[11px] text-slate-600">Last: 2 hours ago</span>
-                                </li>
-                                <li class="flex items-center justify-between">
-                                    <span class="text-slate-500">Version</span>
-                                    <span class="text-[11px] text-slate-600">v1.0.0</span>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
 
                     <!-- Recent activity / table -->

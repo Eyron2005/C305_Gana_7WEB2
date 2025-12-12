@@ -181,9 +181,7 @@
               <h2 class="h2 section-title">What I Do?</h2>
 
               <p class="section-text">
-                I craft intuitive, visually engaging user interfaces and build clean, functional digital experiences.
-                From concept to final development, I focus on creating designs that feel smooth, modern, and
-                user-friendly.
+                Hello, my name is Eron Fred P. Gana, and I am 20 years old. I am currently pursuing a degree in Computer Science at the City College of Angeles. Initially, I was hesitant to take this course, as it was not something I was particularly interested in. However, through learning programming, I have grown to appreciate the field and, more importantly, have made many friends who continue to inspire and support me on this journey.
               </p>
             </div>
 
@@ -325,8 +323,8 @@
                   <h3 class="h3 card-title">Ho-Se</h3>
 
                   <p class="card-text">
-                    Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula
-                    porta felis euismod semper. Fusce dapibus tellus cursus.
+                    Ho-Se connects you with trusted helpers who take care of the chores you don’t have time for.
+                    From cleaning and organizing to small household tasks, Ho-Se makes it easy to book reliable service with just a few taps.
                   </p>
 
                   <a href="#" class="btn-text" style="color: #a07cc5">
@@ -337,7 +335,7 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="{{ asset('images/project-1.png') }}" width="650" height="370" loading="lazy"
+                  <img src="{{ asset('images/Hose.png') }}" width="650" height="370" loading="lazy"
                     alt="Web Design" class="w-100">
                 </figure>
 
@@ -354,8 +352,9 @@
                   <h3 class="h3 card-title">Flowa</h3>
 
                   <p class="card-text">
-                    Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula
-                    porta felis euismod semper. Fusce dapibus tellus cursus.
+                    Flowa is the smart listing app built to keep you on track and in control.
+                    Create, sort, customize, and manage your lists with speed and style.
+                    From goals to projects to reminders, Flowa helps you stay organized and flowing forward.
                   </p>
 
                   <a href="#" class="btn-text" style="color: #a07cc5">
@@ -366,7 +365,7 @@
                 </div>
 
                 <figure class="card-banner" data-reveal="right">
-                  <img src="{{ asset('images/project-1.png') }}" width="650" height="370" loading="lazy"
+                  <img src="{{ asset('images/flow.png') }}" width="650" height="1" loading="lazy"
                     alt="Web Design" class="w-100">
                 </figure>
 

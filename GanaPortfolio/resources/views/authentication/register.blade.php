@@ -27,11 +27,6 @@
 
                 <!-- Left side (hero-style text) -->
                 <div class="space-y-4">
-                    <span class="inline-flex items-center gap-2 rounded-full bg-sky-50 text-sky-600 text-xs font-semibold px-3 py-1">
-                        <span class="h-1.5 w-1.5 rounded-full bg-sky-600"></span>
-                        Join the community
-                    </span>
-
                     <h1 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
                         Create an account<br>and start building.
                     </h1>
@@ -39,15 +34,6 @@
                     <p class="text-sm md:text-base text-slate-500">
                         Get access to your dashboard, manage your portfolio projects, and personalize your online brand.
                     </p>
-
-                    <div class="flex items-center gap-3 text-xs text-slate-400">
-                        <div class="flex -space-x-2">
-                            <div class="h-7 w-7 rounded-full bg-rose-200"></div>
-                            <div class="h-7 w-7 rounded-full bg-sky-200"></div>
-                            <div class="h-7 w-7 rounded-full bg-emerald-200"></div>
-                        </div>
-                        <span>Join thousands of creatives today.</span>
-                    </div>
                 </div>
 
                 <!-- Right side (form) -->

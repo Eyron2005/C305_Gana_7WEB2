@@ -180,39 +180,6 @@
                                         >
                                     </div>
 
-                                    <div>
-                                        <label class="block text-xs font-medium text-slate-600 mb-1.5" for="live_url">
-                                            Live URL
-                                        </label>
-                                        <input
-                                            id="live_url"
-                                            name="live_url"
-                                            type="text"
-                                            value="{{ old('live_url') }}"
-                                            class="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-300/60 focus:border-indigo-400"
-                                            placeholder="https://yourproject.com"
-                                        >
-                                    </div>
-                                </div>
-
-                                <!-- Sort order -->
-                                <div class="grid gap-4 md:grid-cols-2">
-                                    <div>
-                                        <label class="block text-xs font-medium text-slate-600 mb-1.5" for="sort_order">
-                                            Sort order
-                                        </label>
-                                        <input
-                                            id="sort_order"
-                                            name="sort_order"
-                                            type="number"
-                                            value="{{ old('sort_order') }}"
-                                            class="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-300/60 focus:border-indigo-400"
-                                            placeholder="1"
-                                        >
-                                        <p class="mt-1 text-[11px] text-slate-400">
-                                            Lower numbers appear first on your portfolio page.
-                                        </p>
-                                    </div>
                                 </div>
 
                                 <!-- Submit -->
@@ -248,27 +215,9 @@
                                     <p class="text-sm font-semibold text-slate-900">
                                         {{ old('title', 'Project Title') }}
                                     </p>
-                                    <p class="text-xs text-slate-500 line-clamp-3">
-                                        {{ old('subtitle', 'Short and catchy subtitle for your project goes here.') }}
-                                    </p>
                                 </div>
 
-                                <div class="flex gap-2 flex-wrap pt-1">
-                                    <span class="inline-flex items-center rounded-full bg-slate-900 text-white text-[11px] px-3 py-1">
-                                        View case study
-                                    </span>
-                                    <span class="inline-flex items-center rounded-full bg-slate-200 text-slate-700 text-[11px] px-3 py-1">
-                                        Live demo
-                                    </span>
-                                    <span class="inline-flex items-center rounded-full bg-slate-200 text-slate-700 text-[11px] px-3 py-1">
-                                        GitHub
-                                    </span>
-                                </div>
                             </div>
-
-                            <p class="text-[11px] text-slate-400">
-                                This is a visual approximation of how the project may appear on your public portfolio page.
-                            </p>
                         </div>
 
                     </div>
